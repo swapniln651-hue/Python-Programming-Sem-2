@@ -1,0 +1,17 @@
+#  stores roll numbers in sets. Find students present in both classes.
+"""
+Created on Mon Mar  9 15:32:18 2026
+
+@author: swapnil
+"""
+# Roll numbers present in Class A and Class B
+class_a = {101, 104, 105, 109, 110}
+class_b = {104, 103, 109, 112, 115}
+
+# Find students present in both
+present_in_both = class_a.intersection(class_b)
+
+# Alternatively, using the & operator:
+# present_in_both = class_a & class_b
+
+print(f"Students present in both: {present_in_both}")
