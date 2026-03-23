@@ -1,0 +1,32 @@
+# to create a text file, add course outcomes, and perform basic file operations such as read, write, and append.
+"""
+Created on Mon Mar 23 14:54:29 2026
+
+@author: swapnil
+"""
+
+file_name = "course_outcomes.txt"
+with open(file_name, "w") as file:
+  file.write("Course Outcomes (COs):\n")
+  file.write("1. Understand the basics of Python programming.\n")
+  file.write("2. Apply loops, functions, and data structures.\n")
+  file.write("3. Handle files and perform basic I/O operations.\n")
+  file.write("4. Solve programming problems using logic and algorithms.\n")
+  file.write("5. Develop small projects using Python.\n")
+print(f"Data written to {file_name} successfully.\n")
+
+
+print("Reading file content:")
+with open(file_name, "r") as file:
+  content = file.read()
+  print(content)
+
+with open(file_name, "a") as file:
+  file.write("6. Gain understanding of basic software development practices.\n")
+  print("After appending a new course outcome:")
+with open(file_name, "r") as file:
+  print(file.read())
+
+with open(file_name, "r") as file:
+  lines = file.readlines()
+  print("Number of course outcomes (lines):", len(lines) - 1)
