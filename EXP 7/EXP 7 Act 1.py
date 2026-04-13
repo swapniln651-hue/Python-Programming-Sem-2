@@ -13,7 +13,7 @@ class BankAccount:
     def deposit(self, amount):
         if amount > 0:
             self._balance += amount
-            print(f"\nSuccessfully deposited ${amount:.2f}")
+            print(f"\nSuccessfully deposited {amount:.2f}")
         else:
             print("\nError: Deposit amount must be positive.")
         self.display_balance()
@@ -21,7 +21,7 @@ class BankAccount:
     def withdraw(self, amount):
         if 0 < amount <= self._balance:
             self._balance -= amount
-            print(f"\nSuccessfully withdrew ${amount:.2f}")
+            print(f"\nSuccessfully withdrew {amount:.2f}")
         elif amount > self._balance:
             print("\nError: Insufficient funds!")
         else:
@@ -29,7 +29,7 @@ class BankAccount:
         self.display_balance()
 
     def display_balance(self):
-        print(f"Current Balance for {self.owner}: ${self._balance:.2f}")
+        print(f"Current Balance for {self.owner}: {self._balance:.2f}")
 
 # --- Setup ---
 name = input("Enter account holder name: ")
